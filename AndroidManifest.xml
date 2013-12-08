@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android_service"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.android_service.ServiceMainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name=".TweetAPITest" >
+        </activity>
+        <activity android:name=".PulltoflushTest" >
+        </activity>
+        <activity android:name=".ScreentShot" >
+        </activity>
+        <activity android:name=".AsyncHttpClientTest" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <service android:name="com.example.android_service.LocalService" >
+        </service>
+
+        <activity android:name=".UmengSDK" >
+        </activity>
+        <activity android:name=".ETipsViewSwitch" >
+        </activity>
+
+        <receiver android:name="com.receiver.AlarmReceiver" >
+            <intent-filter>
+                <action android:name="Alarm" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".AlarmManagerActy" >
+        </activity>
+        <activity android:name=".MyNotification" >
+        </activity>
+        <activity android:name=".AnimationActy" >
+        </activity>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="51fad1a456240b475401ab6f" >
+        </meta-data>
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 获取用户手机的IMEI，用来唯一的标识用户。 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许应用程序联网，以便向我们的服务器端发送数据。 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于评论模块分享位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于评论模块分享位置信息 -->
+
+</manifest>
