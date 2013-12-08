@@ -26,12 +26,15 @@
         </activity>
         <activity android:name=".ScreentShot" >
         </activity>
-        <activity android:name=".AsyncHttpClientTest" >
+        <activity android:name=".Bitmap1Canvas" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".AsyncHttpClientTest" >
+       
         </activity>
         <activity
             android:name="com.umeng.socialize.view.ShareActivity"
