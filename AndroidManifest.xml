@@ -28,13 +28,14 @@
         <activity android:name=".ScreentShot" >
         </activity>
         <activity android:name=".MyWebView" >
+        </activity>
+        <activity android:name=".MyAdViewTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-   
         <activity android:name=".Bitmap1Canvas" >
         </activity>
         <activity android:name=".AsyncHttpClientTest" >
@@ -73,8 +74,19 @@
             android:name="UMENG_APPKEY"
             android:value="51fad1a456240b475401ab6f" >
         </meta-data>
+
         <activity android:name=".ImgLoaderTest" >
         </activity>
+        <!-- 声明widget对应的AppWidgetProvider -->
+        <receiver android:name="com.receiver.NotesAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/note_widget" />
+        </receiver>
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 检测网络状态 -->

@@ -22,8 +22,8 @@ public class MyWebView extends BaseUIActivity implements OnClickListener {
 	private ProgressBar loading;
 	private int scale = 39;
 	private TextView tv_title;
-	private String homeUrl = "http://www.36kr.com";
-	private String currentUrl = "http://www.36kr.com";
+	private String homeUrl = "http://m.wyugogo.com";
+	private String currentUrl = "http://m.wyugogo.com";
  
     private boolean isLoading = false;
 	private int steps;
