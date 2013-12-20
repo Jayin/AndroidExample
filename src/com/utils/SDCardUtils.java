@@ -6,63 +6,63 @@ import android.os.Environment;
 import android.os.StatFs;
 
 /***
- * SD¿¨¹¤¾ßÀà
+ * SDå¡å·¥å…·ç±»
  * 
  * @author Lenovo
  * 
  */
 public class SDCardUtils {
-	/** SDCardµÄ¸ùÂ·¾¶ **/
-	private static String SDCARD_PATH = null;
+        /** SDCardçš„æ ¹è·¯å¾„ **/
+        private static String SDCARD_PATH = null;
 
-	/**
-	 * ÅĞ¶ÏsdcardÊÇ·ñ´æÔÚ
-	 * 
-	 * @return
-	 */
-	public static boolean isExistSDCard() {
-		if (android.os.Environment.getExternalStorageState().equals(
-				android.os.Environment.MEDIA_MOUNTED)) {
-			return true;
-		} else
-			return false;
-	}
+        /**
+         * åˆ¤æ–­sdcardæ˜¯å¦å­˜åœ¨
+         * 
+         * @return
+         */
+        public static boolean isExistSDCard() {
+                if (android.os.Environment.getExternalStorageState().equals(
+                                android.os.Environment.MEDIA_MOUNTED)) {
+                        return true;
+                } else
+                        return false;
+        }
 
-	/**
-	 * 
-	 * È¡µÃSD¿¨Â·¾¶£¬ÒÔ/(ÒÀÀµFile.separator)½áÎ²
-	 * 
-	 * @return
-	 */
-	public static String getSDCardPath() {
-		if (!isExistSDCard())
-			return null;
-		if (null != SDCARD_PATH)
-			return SDCARD_PATH;
-		File path = Environment.getExternalStorageDirectory();
-		String SDCardPath = path.getAbsolutePath();
-		SDCardPath += SDCardPath.endsWith(File.separator) ? "" : File.separator;
-		SDCARD_PATH = SDCardPath;
-		return SDCardPath;
-	}
+        /**
+         * 
+         * å–å¾—SDå¡è·¯å¾„ï¼Œä»¥/(ä¾èµ–File.separator)ç»“å°¾
+         * 
+         * @return
+         */
+        public static String getSDCardPath() {
+                if (!isExistSDCard())
+                        return null;
+                if (null != SDCARD_PATH)
+                        return SDCARD_PATH;
+                File path = Environment.getExternalStorageDirectory();
+                String SDCardPath = path.getAbsolutePath();
+                SDCardPath += SDCardPath.endsWith(File.separator) ? "" : File.separator;
+                SDCARD_PATH = SDCardPath;
+                return SDCardPath;
+        }
     /**
-     * »ñÈ¡SD¿¨Ê£Óà¿Õ¼ä(MB)
+     * è·å–SDå¡å‰©ä½™ç©ºé—´(MB)
      * @return 0 if SDCard is not exist
      */
-	public static long getSDFreeSize() {
-		if(!isExistSDCard())return 0;
-		// È¡µÃSD¿¨ÎÄ¼şÂ·¾¶
-		File path = Environment.getExternalStorageDirectory();
-		StatFs sf = new StatFs(path.getPath());
-		// »ñÈ¡µ¥¸öÊı¾İ¿éµÄ´óĞ¡(Byte)
-		long blockSize = sf.getBlockSize();
-		// ¿ÕÏĞµÄÊı¾İ¿éµÄÊıÁ¿
-		long freeBlocks = sf.getAvailableBlocks();
-		// ·µ»ØSD¿¨¿ÕÏĞ´óĞ¡
-		// return freeBlocks * blockSize; //µ¥Î»Byte
-		// return (freeBlocks * blockSize)/1024; //µ¥Î»KB
-		return (freeBlocks * blockSize) / 1024 / 1024; // µ¥Î»MB
-	}
-	
-	 
+        public static long getSDFreeSize() {
+                if(!isExistSDCard())return 0;
+                // å–å¾—SDå¡æ–‡ä»¶è·¯å¾„
+                File path = Environment.getExternalStorageDirectory();
+                StatFs sf = new StatFs(path.getPath());
+                // è·å–å•ä¸ªæ•°æ®å—çš„å¤§å°(Byte)
+                long blockSize = sf.getBlockSize();
+                // ç©ºé—²çš„æ•°æ®å—çš„æ•°é‡
+                long freeBlocks = sf.getAvailableBlocks();
+                // è¿”å›SDå¡ç©ºé—²å¤§å°
+                // return freeBlocks * blockSize; //å•ä½Byte
+                // return (freeBlocks * blockSize)/1024; //å•ä½KB
+                return (freeBlocks * blockSize) / 1024 / 1024; // å•ä½MB
+        }
+        
+         
 }

@@ -4,36 +4,47 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import com.example.android_service.R;
-import com.utils.FileUtils;
-import com.utils.SDCardUtils;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
+import com.example.android_service.R;
+import com.utils.AndroidUtils;
+import com.utils.FileUtils;
+import com.utils.SDCardUtils;
+
 /**
- * A view for advertisement display
+ * A view for advertisement display<br>
+ * 使用方法：<br>
+ * <li>1.设置urls(可以选择设置是否缓存照图片 setIsCachePic ，项目需要，这里就不缓存了) <br> <li>
+ * 2.display()如果有缓存在先显示后下载 ,下载并显示广告 gone -> visable<br>
+ * (已分离，每次都下载更新) 2.1.注意,这里默认是如果存在对应的缓存(根据文件名来判断)。就不去下载  <br>
+ * 2.2.可以用 cleanCachePic()清楚缓存<br>
+ * <strong>一般建议</strong><br> <strong><li>一般建议,设置3附图片</strong><br>
+ *  <strong><li>1.urls 从web获取,确定有新的时候，删除缓存再下载(操作比较麻烦)</strong><br>
+ *  <strong><li>2.urls固定死，每次先显示缓存 然后下载，下载直接替换缓存,这样服务端就保持不用修改文件名就行了（默认这种放）</strong><br>
  * 
  * @author Jayin Ton
  * 
  */
+@SuppressLint("HandlerLeak")
 public class ADView extends ViewFlipper {
 	private static final int ADView_Start = 0;
 	private static final int ADView_DownloadFinish = 1;
@@ -45,7 +56,9 @@ public class ADView extends ViewFlipper {
 	// defaultFilePath : /mnt/sdcard/AD/
 	private String FolderPath = SDCardUtils.getSDCardPath() + "AD"
 			+ File.separator;
-	private boolean isCachePic = false;  //default it's no cache the pic
+	private boolean isCachePic = false; // default it's cache the pic
+	private List<View> adlist = null; // 广告View 实际显示的
+	private List<View> downloadADList = null;
 
 	public ADView(Context context) {
 		super(context);
@@ -63,7 +76,9 @@ public class ADView extends ViewFlipper {
 	 * init the ADView
 	 */
 	public void init() {
-		isCachePic = false;
+		isCachePic = true;
+		adlist = new ArrayList<View>();
+		downloadADList = new ArrayList<View>();
 		h = new AdViewHandler();
 		dismiss();
 		this.setInAnimation(context, R.anim.push_left_in);
@@ -79,8 +94,8 @@ public class ADView extends ViewFlipper {
 	public void setURL(String... urls) {
 		this.urls = urls;
 	}
-	
-	public void setIsCachePic(boolean cachePic){
+
+	public void setIsCachePic(boolean cachePic) {
 		this.isCachePic = cachePic;
 	}
 
@@ -89,11 +104,22 @@ public class ADView extends ViewFlipper {
 	}
 
 	protected void dismiss() {
-		this.setVisibility(View.GONE);
+		this.setVisibility(View.INVISIBLE);
 	}
 
-	public void addAD(View v) {
-		this.addView(v, this.getChildCount());
+	public void addADList(View v) {
+		adlist.add(v);
+	}
+
+	public void addDownloadADList(View v) {
+		downloadADList.add(v);
+	}
+
+	public void addADView() {
+		this.removeAllViews();
+		for (View v : adlist) {
+			this.addView(v, this.getChildCount());
+		}
 	}
 
 	/**
@@ -113,66 +139,126 @@ public class ADView extends ViewFlipper {
 			return false;
 		}
 	}
+	/**
+	 * 新建一个广告栏
+	 * @return
+	 */
+	public View creatADBaner(Bitmap bitmap){
+	
+		View v = LayoutInflater.from(context).inflate(
+				R.layout.item_adview, null);
+		ImageView iv = (ImageView) v
+				.findViewById(R.id.item_adview_iv);
+		iv.setImageBitmap(bitmap);
+		iv.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
+		
+	    return v;
+	}
 
+	/**
+	 * 若有缓存,则先显示后下载
+	 */
 	public void display() {
 		if (FileUtils.isFolderExist(FolderPath)) {
 			File file = new File(FolderPath);
 			String[] files = file.list();
+
 			if (files != null && files.length > 0) {
+				adlist = new ArrayList<View>();
 				for (String fileName : files) {
+//					Bitmap bitmap = BitmapFactory.decodeFile(FolderPath
+//							+ fileName);
+//					View v = LayoutInflater.from(context).inflate(
+//							R.layout.item_adview, null);
+//					ImageView iv = (ImageView) v
+//							.findViewById(R.id.item_adview_iv);
+//					iv.setImageBitmap(bitmap);
 					Bitmap bitmap = BitmapFactory.decodeFile(FolderPath
 							+ fileName);
-					View v = LayoutInflater.from(context).inflate(
-							R.layout.item_adview, null);
-					ImageView iv = (ImageView) v.findViewById(R.id.iv);
-					iv.setImageBitmap(bitmap);
-					addAD(v);
+					addADList(creatADBaner(bitmap));
 				}
+				addADView();
 				show();
+				goDownload();
 			} else {
 				goDownload();
 			}
+		} else {
+			FileUtils.makeDirs(FolderPath);
+			goDownload();
 		}
+	}
+    
+	
+	/**
+	 * 开始下载广告并播放广告
+	 * 
+	 * @deprecated
+	 */
+	public void displayAD() {
+		goDownload();
 	}
 
 	public void goDownload() {
-		try {
+		// try {
 
-			new Thread(new Runnable() {
-				@Override
-				public void run() {
-					if (urls == null || urls.length == 0) {
-						return;
-					} else {
-						if (isCachePic && FileUtils.deleteFile(FolderPath)) {
-							FileUtils.makeDirs(FolderPath);
-						}
-						for (int i = 0; i < urls.length; i++) {
-							String url = urls[i];
-							Log.i("deubg", "download:" + url);
-							byte[] data = doownloadPic(url);
-							if (data != null) {
-								if(isCachePic)saveToFile(data, FileUtils.getFileName(url));
-								Message msg = h.obtainMessage();
-								msg.obj = BitmapFactory.decodeByteArray(data,
-										0, data.length);
-								msg.what = ADView_DownloadFinish;
-								h.sendMessage(msg);
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				downloadADList = new ArrayList<View>();
+				h.sendEmptyMessage(ADView_Start);
+				if (urls == null || urls.length == 0) {
+					return;
+				} else {
+					for (int i = 0; i < urls.length; i++) {
+						String url = urls[i];
+//                2.1.注意,这里默认是如果存在对应的缓存(根据文件名来判断)。就不去下载，如果需要缓存请不注释
+//						if (FileUtils.isFileExist(FolderPath
+//								+ FileUtils.getFileName(url)))
+//							continue;
+						byte[] data = downloadPic(url);
+						if (data != null) {
+							if (isCachePic) {
+								saveToFile(data, FileUtils.getFileName(url)); // hascache
+
 							}
+							Message msg = h.obtainMessage();
+							msg.obj = BitmapFactory.decodeByteArray(data, 0,
+									data.length);
+							msg.what = ADView_DownloadFinish;
+							h.sendMessage(msg);
 						}
-						h.sendEmptyMessage(ADView_Finish);
 					}
+					h.sendEmptyMessage(ADView_Finish); // 第一次没有图片并下载完成
 
 				}
-			}).start();
-		} catch (Exception e) {
-            e.printStackTrace();
-            //there is no space to save the cache-pic;
-		}
+
+			}
+		}).start();
+		// } catch (Exception e) {
+		// e.printStackTrace();
+		// // there is no space to save the cache-pic;
+		// }
 	}
 
+	/**
+	 * 保存图片
+	 * 
+	 * @param data
+	 * @param fileName
+	 * @return
+	 */
 	protected boolean saveToFile(byte[] data, String fileName) {
-		return FileUtils.writeFile(FolderPath + fileName, data);
+		if (FileUtils.isFileExist(FolderPath + fileName))
+			FileUtils.deleteFile(FolderPath + fileName);
+		if (SDCardUtils.getSDFreeSize() >= 5) {
+
+			return FileUtils.writeFile(FolderPath + fileName, data);
+		} else {
+
+			return false;
+		}
+
 	}
 
 	class AdViewHandler extends Handler {
@@ -180,21 +266,27 @@ public class ADView extends ViewFlipper {
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
 			case ADView_Start:
-				Log.i("debug", "ADView_Start");
+				dismiss();
 				break;
-
 			case ADView_Faild:
-				Log.i("debug", "ADView_Faild");
+				dismiss();
 				break;
 			case ADView_DownloadFinish:
-				Log.i("debug", "ADView_Finish");
-				View v = LayoutInflater.from(context).inflate(
-						R.layout.item_adview, null);
-				ImageView iv = (ImageView) v.findViewById(R.id.iv);
-				iv.setImageBitmap((Bitmap) msg.obj);
-				addAD(v);
+//				View v = LayoutInflater.from(context).inflate(
+//						R.layout.item_adview, null);
+//				ImageView iv = (ImageView) v.findViewById(R.id.item_adview_iv);
+//				iv.setImageBitmap((Bitmap) msg.obj);
+//				android.view.ViewGroup.LayoutParams params = iv
+//						.getLayoutParams();
+//				params.width = android.view.ViewGroup.LayoutParams.MATCH_PARENT;
+//				iv.setLayoutParams(params);
+				addDownloadADList(creatADBaner((Bitmap) msg.obj));
 				break;
 			case ADView_Finish: // all download mission finished
+				if (downloadADList != null && downloadADList.size() > 0)
+					adlist = new ArrayList<View>(downloadADList);
+				downloadADList = null;
+				addADView();
 				show();
 				break;
 			default:
@@ -203,7 +295,15 @@ public class ADView extends ViewFlipper {
 		}
 	}
 
-	protected byte[] doownloadPic(String url) {
+	/**
+	 * 下载图片
+	 * 
+	 * @param url
+	 * @return
+	 */
+	protected byte[] downloadPic(String url) {
+		if (!AndroidUtils.isNetworkConnected(getContext()))
+			return null;
 		DefaultHttpClient client = new DefaultHttpClient();
 		HttpGet get = new HttpGet(url);
 		HttpResponse response = null;
@@ -235,7 +335,15 @@ public class ADView extends ViewFlipper {
 				client.getConnectionManager().shutdown();
 			}
 		}
+	}
 
+	/**
+	 * 删除缓存图片
+	 * 
+	 * @return true if delete successfully
+	 */
+	public boolean cleanCachePic() {
+		return FileUtils.deleteFilesInFolder(FolderPath);
 	}
 
 }

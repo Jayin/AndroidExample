@@ -345,7 +345,7 @@ public final class R {
         public static final int image1=0x7f0c0026;
         public static final int imageView1=0x7f0c0014;
         public static final int it_lv_tv=0x7f0c0027;
-        public static final int iv=0x7f0c0025;
+        public static final int item_adview_iv=0x7f0c0025;
         public static final int listView=0x7f0c0044;
         public static final int mypic=0x7f0c0007;
         public static final int navigation_foot=0x7f0c0019;
