@@ -65,6 +65,8 @@ public class BitmapUtils {
 				options.inSampleSize = Math.round(bitmap.getHeight() / reqHeight);
 			}
 		}
+		if(bitmap.getNinePatchChunk()==null)L.i("null");
+	 
 		return BitmapFactory.decodeByteArray(bitmap.getNinePatchChunk(), 0, bitmap.getNinePatchChunk().length, options);		
 	}
  
