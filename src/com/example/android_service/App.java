@@ -13,6 +13,8 @@ public class App extends Application {
       // Create global configuration and initialize ImageLoader with this configuration
       ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext()).discCacheSize(50 * 1024 * 1024)
     	        .discCacheFileCount(100).memoryCacheSize(2 * 1024 * 1024).build();
+      
       ImageLoader.getInstance().init(config);
+      ImageLoader loader = ImageLoader.getInstance();
 	}
 }
