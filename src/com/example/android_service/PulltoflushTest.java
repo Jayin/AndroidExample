@@ -1,5 +1,8 @@
 package com.example.android_service;
 
+import java.util.Arrays;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,98 +15,41 @@ import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.example.android_service.PullToRefreshListView.OnRefreshListener;
+import com.example.widget.MyPullToRefrushListView;
 
 public class PulltoflushTest extends Activity {
-	private PullToRefreshListView lv;
+	private MyPullToRefrushListView lv;
 
 	private View foot;
 
+	private String[] mStrings = { "Abbaye de Belloc",
+			"Abbaye du Mont des Cats", "Abertam", "Abondance", "Ackawi",
+			"Acorn", "Adelost", "Affidelice au Chablis", "Afuega'l Pitu",
+			"Airag", "Airedale", "Aisy Cendre", "Allgauer Emmentaler","Abbaye de Belloc",
+			"Abbaye du Mont des Cats", "Abertam", "Abondance", "Ackawi",
+			"Acorn", "Adelost", "Affidelice au Chablis", "Afuega'l Pitu",
+			"Airag", "Airedale", "Aisy Cendre", "Allgauer Emmentaler" };
+
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.acty_pulltoreflush);
-		lv = (PullToRefreshListView) findViewById(R.id.pulltoreflush);
+		lv = (MyPullToRefrushListView) findViewById(R.id.pulltoreflush);
 		final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				R.layout.item_lv);
-//		for (int i = 1; i < 100; i++) {
-//			adapter.add(i + "");
-//
-//		}
+		adapter.addAll(Arrays.asList(mStrings));
 		lv.setAdapter(adapter);
-		lv.setOnRefreshListener(new OnRefreshListener() {
+
+		lv.setOnRefreshListener(new MyPullToRefrushListView.OnRefreshListener() {
 
 			@Override
 			public void onRefresh() {
-
 				new Task().execute();
 			}
 		});
-		lv.setOnScrollListener(new OnScrollListener() {
 
-			@Override
-			public void onScrollStateChanged(AbsListView view, int scrollState) {
-
-			}
-
-			@Override
-			public void onScroll(AbsListView view, int firstVisibleItem,
-					int visibleItemCount, int totalItemCount) {
-
-			}
-		});
-		View view = LayoutInflater.from(this).inflate(R.layout.foot, null);
-		view.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				Toast.makeText(PulltoflushTest.this, "your sister!", 1).show();
-
-			}
-
-		});
-		view.findViewById(R.id.foot_btn).setOnClickListener(
-				new View.OnClickListener() {
-
-					@Override
-					public void onClick(View v) {
-						lv.clickRefresh();
-//                       
-//						for (int i = 100; i < 200; i++) {
-//							adapter.add(i + "");
-//						}
-//						adapter.notifyDataSetChanged();
-					}
-				});
- 	  	lv.addFooterView(view, null, true);
- 	    
-		
-//		lv.setOnScrollListener(new OnScrollListener() {
-//			
-//			@Override
-//			public void onScrollStateChanged(AbsListView view, int scrollState) {
-//				lv.onScrollStateChanged(view, scrollState);
-//				//无数据
-//				if(lv.getAdapter().getCount() ==0)return;
-//				boolean isScrollEnd = false;
-//				try{
-//					 if(view.getPositionForView(view)==lv.getLastVisiblePosition()){
-//						 isScrollEnd = true; 
-//					 }
-//				}catch(Exception e){
-//					isScrollEnd = false;
-//				}
-//				
-//			}
-//			
-//			@Override
-//			public void onScroll(AbsListView view, int firstVisibleItem,
-//					int visibleItemCount, int totalItemCount) {
-//				 
-//				
-//			}
-//		});
-	  	
 	}
 
 	class Task extends AsyncTask<Void, Void, Void> {
