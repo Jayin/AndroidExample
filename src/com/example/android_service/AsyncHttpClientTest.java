@@ -1,6 +1,11 @@
 package com.example.android_service;
 
+import java.util.Date;
+
 import org.apache.http.Header;
+import org.apache.http.client.CookieStore;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.impl.client.BasicCookieStore;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -31,6 +36,9 @@ public class AsyncHttpClientTest extends BaseUIActivity {
 			@Override
 			public void onClick(View v) {
 				AsyncHttpClient client = new AsyncHttpClient();
+			
+			 
+				client.setCookieStore(null);
 				client.get(getContext(),
 						"http://nodejs.org/images/logo-light.png", null,
 						new AsyncHttpResponseHandler() {
@@ -40,9 +48,12 @@ public class AsyncHttpClientTest extends BaseUIActivity {
 									byte[] res) {
                                    Bitmap bitmap = BitmapFactory.decodeByteArray(res, 0,res.length);
                                    iv.setImageBitmap(bitmap);
+                                   
 							}
 
 						});
+				
+				 
 
 			}
 		});

@@ -50,7 +50,7 @@ public class PullAndLoadMoreListViewTest extends BaseUIActivity {
 				toast("onRefresh");
 				mListItems.addAll(Arrays.asList(mAnimals));
 				adapter.notifyDataSetChanged();
-				//xlv.onRefreshComplete("2013.12.22");
+				xlv.onRefreshComplete("2013.12.22");
 			}
 		});
 
