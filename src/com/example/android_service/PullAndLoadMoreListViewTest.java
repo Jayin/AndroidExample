@@ -46,11 +46,11 @@ public class PullAndLoadMoreListViewTest extends BaseUIActivity {
 		xlv.setOnRefreshListener(new OnRefreshListener() {
 
 			@Override
-			public void onRefresh() {
-				toast("onRefresh");
-				mListItems.addAll(Arrays.asList(mAnimals));
-				adapter.notifyDataSetChanged();
-				xlv.onRefreshComplete("2013.12.22");
+ 			public void onRefresh() {
+//				toast("onRefresh");
+
+				new Refresh().execute();
+				
 			}
 		});
 
@@ -90,6 +90,8 @@ public class PullAndLoadMoreListViewTest extends BaseUIActivity {
 		protected Void doInBackground(Void... params) {
 			try {
 				Thread.sleep(2000);
+				mListItems.addAll(Arrays.asList(mAnimals));
+				
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -99,6 +101,7 @@ public class PullAndLoadMoreListViewTest extends BaseUIActivity {
 		@Override
 		protected void onPostExecute(Void result) {
 			toast("刷新完毕");
+			adapter.notifyDataSetChanged();
 			xlv.onRefreshComplete();
 		}
 
