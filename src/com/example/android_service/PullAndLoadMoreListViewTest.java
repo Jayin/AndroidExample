@@ -92,7 +92,7 @@ public class PullAndLoadMoreListViewTest extends BaseUIActivity {
 		protected Void doInBackground(Void... params) {
 			try {
 				Thread.sleep(2000);
-				mListItems.addAll(Arrays.asList(mAnimals));
+			 	mListItems.addAll(Arrays.asList(mAnimals));
 				
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -103,8 +103,10 @@ public class PullAndLoadMoreListViewTest extends BaseUIActivity {
 		@Override
 		protected void onPostExecute(Void result) {
 			toast("刷新完毕");
-			adapter.notifyDataSetChanged();
+			//adapter.notifyDataSetChanged();
+			
 			xlv.onRefreshComplete();
+			xlv.setCanRefresh(false,"没有更多！");
 		}
 
 	}
