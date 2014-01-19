@@ -7,3 +7,7 @@
 
 #android
 *.apk
+
+bin/
+gen/
+

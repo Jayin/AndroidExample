@@ -10,9 +10,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 
-import com.costum.android.widget.PullAndLoadListView;
-import com.costum.android.widget.PullAndLoadListView.OnLoadMoreListener;
-import com.costum.android.widget.PullToRefreshListView.OnRefreshListener;
+import com.custom.widget.PullAndLoadListView;
+import com.custom.widget.PullAndLoadListView.OnLoadMoreListener;
+import com.custom.widget.PullToRefreshListView.OnRefreshListener;
 import com.utils.AndroidUtils;
 
 public class PullAndLoadMoreListViewTest extends BaseUIActivity {
@@ -38,7 +38,7 @@ public class PullAndLoadMoreListViewTest extends BaseUIActivity {
 		xlv = (PullAndLoadListView) findViewById(R.id.xlistview);
 
 		mListItems = new LinkedList<String>();
-		mListItems.addAll(Arrays.asList(mNames));
+	//	mListItems.addAll(Arrays.asList(mNames));
 		// mListItems.addAll(Arrays.asList(mAnimals));
 
 		adapter = new ArrayAdapter<String>(this, R.layout.item_lv, mListItems);
@@ -71,6 +71,8 @@ public class PullAndLoadMoreListViewTest extends BaseUIActivity {
 				
 			}
 		});
+		xlv.toRefresh();
+		
 
 	}
 
