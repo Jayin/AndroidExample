@@ -1,18 +1,16 @@
 package com.receiver;
 
-import com.example.android_service.ImgLoaderTest;
-import com.example.android_service.MyWebView;
-import com.example.android_service.R;
-import com.nostra13.universalimageloader.core.ImageLoader;
-
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.RemoteViews;
+
+import com.example.android_service.ImgLoaderTest;
+import com.example.android_service.MyWebView;
+import com.example.android_service.R;
 
 public class NotesAppWidgetProvider extends AppWidgetProvider {
 

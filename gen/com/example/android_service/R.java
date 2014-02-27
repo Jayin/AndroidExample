@@ -42,6 +42,72 @@ public final class R {
         public static final int zoom_out=0x7f04001e;
     }
     public static final class attr {
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int column_count_landscape=0x7f010001;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int column_count_portrait=0x7f010000;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int grid_paddingBottom=0x7f010006;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int grid_paddingLeft=0x7f010003;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int grid_paddingRight=0x7f010004;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int grid_paddingTop=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int item_margin=0x7f010002;
     }
     public static final class color {
         public static final int author_text=0x7f07001c;
@@ -317,30 +383,30 @@ public final class R {
         public static final int umeng_socialize_x_button=0x7f0200b3;
     }
     public static final class id {
-        public static final int ImageView01=0x7f0c001f;
-        public static final int ImageView02=0x7f0c001e;
-        public static final int ImageView03=0x7f0c001d;
-        public static final int ImageView04=0x7f0c001c;
-        public static final int ImageView05=0x7f0c001b;
-        public static final int ImageView06=0x7f0c001a;
-        public static final int ImageView07=0x7f0c0019;
-        public static final int ImageView08=0x7f0c0018;
-        public static final int ImageView09=0x7f0c0017;
-        public static final int ImageView10=0x7f0c0016;
-        public static final int ImageView11=0x7f0c0015;
-        public static final int ImageView12=0x7f0c0014;
-        public static final int ImageView13=0x7f0c0013;
-        public static final int ImageView14=0x7f0c0012;
-        public static final int ImageView15=0x7f0c0011;
-        public static final int ImageView16=0x7f0c0010;
-        public static final int ImageView17=0x7f0c000f;
-        public static final int ImageView18=0x7f0c000e;
-        public static final int ImageView19=0x7f0c000d;
-        public static final int ImageView20=0x7f0c000c;
-        public static final int ImageView21=0x7f0c000b;
+        public static final int ImageView01=0x7f0c0020;
+        public static final int ImageView02=0x7f0c001f;
+        public static final int ImageView03=0x7f0c001e;
+        public static final int ImageView04=0x7f0c001d;
+        public static final int ImageView05=0x7f0c001c;
+        public static final int ImageView06=0x7f0c001b;
+        public static final int ImageView07=0x7f0c001a;
+        public static final int ImageView08=0x7f0c0019;
+        public static final int ImageView09=0x7f0c0018;
+        public static final int ImageView10=0x7f0c0017;
+        public static final int ImageView11=0x7f0c0016;
+        public static final int ImageView12=0x7f0c0015;
+        public static final int ImageView13=0x7f0c0014;
+        public static final int ImageView14=0x7f0c0013;
+        public static final int ImageView15=0x7f0c0012;
+        public static final int ImageView16=0x7f0c0011;
+        public static final int ImageView17=0x7f0c0010;
+        public static final int ImageView18=0x7f0c000f;
+        public static final int ImageView19=0x7f0c000e;
+        public static final int ImageView20=0x7f0c000d;
+        public static final int ImageView21=0x7f0c000c;
         public static final int action_settings=0x7f0c00be;
-        public static final int acty_etips_main_course_time=0x7f0c0009;
-        public static final int acty_etips_main_course_weekNo=0x7f0c000a;
+        public static final int acty_etips_main_course_time=0x7f0c000a;
+        public static final int acty_etips_main_course_weekNo=0x7f0c000b;
         public static final int acty_tweetapitest_button1=0x7f0c002e;
         public static final int acty_tweetapitest_textView1=0x7f0c002f;
         public static final int adview=0x7f0c0021;
@@ -359,7 +425,7 @@ public final class R {
         public static final int header=0x7f0c007a;
         public static final int image=0x7f0c0006;
         public static final int image1=0x7f0c0033;
-        public static final int imageView1=0x7f0c0020;
+        public static final int imageView1=0x7f0c0008;
         public static final int it_lv_tv=0x7f0c0034;
         public static final int item_adview_iv=0x7f0c0032;
         public static final int listView=0x7f0c005a;
@@ -495,7 +561,7 @@ public final class R {
         public static final int umeng_socialize_ucenter_info=0x7f0c00ad;
         public static final int umeng_socialize_user_center_bt=0x7f0c004f;
         public static final int umeng_xp_ScrollView=0x7f0c007c;
-        public static final int viewflippler=0x7f0c0008;
+        public static final int viewflippler=0x7f0c0009;
         public static final int webView=0x7f0c0088;
         public static final int webView1=0x7f0c0024;
         public static final int web_back=0x7f0c0026;
@@ -515,55 +581,57 @@ public final class R {
         public static final int acty_animation=0x7f030002;
         public static final int acty_asynchttpclienttest=0x7f030003;
         public static final int acty_bitmap1canvas=0x7f030004;
-        public static final int acty_etipsswitch=0x7f030005;
-        public static final int acty_imgloader=0x7f030006;
-        public static final int acty_myadview=0x7f030007;
-        public static final int acty_mynotification=0x7f030008;
-        public static final int acty_mywebview=0x7f030009;
-        public static final int acty_photoviewtest=0x7f03000a;
-        public static final int acty_pullandloadlv=0x7f03000b;
-        public static final int acty_pulltoreflush=0x7f03000c;
-        public static final int acty_screentshot=0x7f03000d;
-        public static final int acty_tweetapitest=0x7f03000e;
-        public static final int acty_umeng=0x7f03000f;
-        public static final int appwidget01=0x7f030010;
-        public static final int foot=0x7f030011;
-        public static final int item_adview=0x7f030012;
-        public static final int item_image=0x7f030013;
-        public static final int item_lv=0x7f030014;
-        public static final int load_more_footer=0x7f030015;
-        public static final int pull_to_refresh_head=0x7f030016;
-        public static final int pull_to_refresh_header=0x7f030017;
-        public static final int umeng_socialize_actionbar=0x7f030018;
-        public static final int umeng_socialize_at_item=0x7f030019;
-        public static final int umeng_socialize_at_overlay=0x7f03001a;
-        public static final int umeng_socialize_at_view=0x7f03001b;
-        public static final int umeng_socialize_base_alert_dialog=0x7f03001c;
-        public static final int umeng_socialize_base_alert_dialog_button=0x7f03001d;
-        public static final int umeng_socialize_bind_select_dialog=0x7f03001e;
-        public static final int umeng_socialize_comment_content=0x7f03001f;
-        public static final int umeng_socialize_comment_detail=0x7f030020;
-        public static final int umeng_socialize_comment_detail_nomap=0x7f030021;
-        public static final int umeng_socialize_comment_item=0x7f030022;
-        public static final int umeng_socialize_comment_more=0x7f030023;
-        public static final int umeng_socialize_comment_view=0x7f030024;
-        public static final int umeng_socialize_composer_header=0x7f030025;
-        public static final int umeng_socialize_failed_load_page=0x7f030026;
-        public static final int umeng_socialize_full_alert_dialog=0x7f030027;
-        public static final int umeng_socialize_full_alert_dialog_item=0x7f030028;
-        public static final int umeng_socialize_full_curtain=0x7f030029;
-        public static final int umeng_socialize_oauth_dialog=0x7f03002a;
-        public static final int umeng_socialize_post_comment=0x7f03002b;
-        public static final int umeng_socialize_post_comment_platform=0x7f03002c;
-        public static final int umeng_socialize_post_share=0x7f03002d;
-        public static final int umeng_socialize_pull_to_refresh_header=0x7f03002e;
-        public static final int umeng_socialize_shareboard_item=0x7f03002f;
-        public static final int umeng_socialize_simple_spinner_item=0x7f030030;
-        public static final int umeng_socialize_titile_bar=0x7f030031;
-        public static final int umeng_socialize_titile_bar_comment=0x7f030032;
-        public static final int umeng_socialize_ucenter=0x7f030033;
-        public static final int umeng_socialize_ucenter_platform_item=0x7f030034;
-        public static final int widget_notes=0x7f030035;
+        public static final int acty_butterknife=0x7f030005;
+        public static final int acty_etipsswitch=0x7f030006;
+        public static final int acty_imgloader=0x7f030007;
+        public static final int acty_myadview=0x7f030008;
+        public static final int acty_mynotification=0x7f030009;
+        public static final int acty_mywebview=0x7f03000a;
+        public static final int acty_photoviewtest=0x7f03000b;
+        public static final int acty_pullandloadlv=0x7f03000c;
+        public static final int acty_pulltoreflush=0x7f03000d;
+        public static final int acty_screentshot=0x7f03000e;
+        public static final int acty_sgv=0x7f03000f;
+        public static final int acty_tweetapitest=0x7f030010;
+        public static final int acty_umeng=0x7f030011;
+        public static final int appwidget01=0x7f030012;
+        public static final int foot=0x7f030013;
+        public static final int item_adview=0x7f030014;
+        public static final int item_image=0x7f030015;
+        public static final int item_lv=0x7f030016;
+        public static final int load_more_footer=0x7f030017;
+        public static final int pull_to_refresh_head=0x7f030018;
+        public static final int pull_to_refresh_header=0x7f030019;
+        public static final int umeng_socialize_actionbar=0x7f03001a;
+        public static final int umeng_socialize_at_item=0x7f03001b;
+        public static final int umeng_socialize_at_overlay=0x7f03001c;
+        public static final int umeng_socialize_at_view=0x7f03001d;
+        public static final int umeng_socialize_base_alert_dialog=0x7f03001e;
+        public static final int umeng_socialize_base_alert_dialog_button=0x7f03001f;
+        public static final int umeng_socialize_bind_select_dialog=0x7f030020;
+        public static final int umeng_socialize_comment_content=0x7f030021;
+        public static final int umeng_socialize_comment_detail=0x7f030022;
+        public static final int umeng_socialize_comment_detail_nomap=0x7f030023;
+        public static final int umeng_socialize_comment_item=0x7f030024;
+        public static final int umeng_socialize_comment_more=0x7f030025;
+        public static final int umeng_socialize_comment_view=0x7f030026;
+        public static final int umeng_socialize_composer_header=0x7f030027;
+        public static final int umeng_socialize_failed_load_page=0x7f030028;
+        public static final int umeng_socialize_full_alert_dialog=0x7f030029;
+        public static final int umeng_socialize_full_alert_dialog_item=0x7f03002a;
+        public static final int umeng_socialize_full_curtain=0x7f03002b;
+        public static final int umeng_socialize_oauth_dialog=0x7f03002c;
+        public static final int umeng_socialize_post_comment=0x7f03002d;
+        public static final int umeng_socialize_post_comment_platform=0x7f03002e;
+        public static final int umeng_socialize_post_share=0x7f03002f;
+        public static final int umeng_socialize_pull_to_refresh_header=0x7f030030;
+        public static final int umeng_socialize_shareboard_item=0x7f030031;
+        public static final int umeng_socialize_simple_spinner_item=0x7f030032;
+        public static final int umeng_socialize_titile_bar=0x7f030033;
+        public static final int umeng_socialize_titile_bar_comment=0x7f030034;
+        public static final int umeng_socialize_ucenter=0x7f030035;
+        public static final int umeng_socialize_ucenter_platform_item=0x7f030036;
+        public static final int widget_notes=0x7f030037;
     }
     public static final class menu {
         public static final int service_main=0x7f0b0000;
@@ -572,63 +640,64 @@ public final class R {
         public static final int msg_notification=0x7f060000;
     }
     public static final class string {
-        public static final int action_settings=0x7f080007;
+        public static final int action_settings=0x7f080008;
         public static final int app_name=0x7f080001;
         public static final int hello=0x7f080000;
-        public static final int hello_world=0x7f080008;
-        public static final int pull_to_refresh_pull_label=0x7f08000a;
-        public static final int pull_to_refresh_refreshing_label=0x7f08000c;
-        public static final int pull_to_refresh_release_label=0x7f08000b;
-        public static final int pull_to_refresh_tap_label=0x7f08000d;
-        public static final int pull_to_refresh_update=0x7f080009;
-        public static final int umeng_example_home_btn_plus=0x7f08003a;
-        public static final int umeng_socialize_back=0x7f080011;
-        public static final int umeng_socialize_comment=0x7f08000f;
-        public static final int umeng_socialize_comment_detail=0x7f080010;
-        public static final int umeng_socialize_friends=0x7f080013;
-        public static final int umeng_socialize_login=0x7f08001e;
-        public static final int umeng_socialize_login_qq=0x7f08001d;
-        public static final int umeng_socialize_msg_hor=0x7f080019;
-        public static final int umeng_socialize_msg_min=0x7f080018;
-        public static final int umeng_socialize_msg_sec=0x7f080017;
-        public static final int umeng_socialize_near_At=0x7f080012;
-        public static final int umeng_socialize_network_break_alert=0x7f08000e;
-        public static final int umeng_socialize_send=0x7f080014;
-        public static final int umeng_socialize_share_content=0x7f08001c;
-        public static final int umeng_socialize_text_add_custom_platform=0x7f080039;
-        public static final int umeng_socialize_text_authorize=0x7f080020;
-        public static final int umeng_socialize_text_choose_account=0x7f08001f;
-        public static final int umeng_socialize_text_comment_hint=0x7f080024;
-        public static final int umeng_socialize_text_douban_key=0x7f080036;
-        public static final int umeng_socialize_text_friend_list=0x7f080025;
-        public static final int umeng_socialize_text_login_fail=0x7f080023;
-        public static final int umeng_socialize_text_qq_key=0x7f080033;
-        public static final int umeng_socialize_text_qq_zone_key=0x7f080034;
-        public static final int umeng_socialize_text_renren_key=0x7f080035;
-        public static final int umeng_socialize_text_sina_key=0x7f080032;
+        public static final int hello_world=0x7f080009;
+        public static final int pull_to_refresh_pull_label=0x7f08000b;
+        public static final int pull_to_refresh_refreshing_label=0x7f08000d;
+        public static final int pull_to_refresh_release_label=0x7f08000c;
+        public static final int pull_to_refresh_tap_label=0x7f08000e;
+        public static final int pull_to_refresh_update=0x7f08000a;
+        public static final int umeng_example_home_btn_plus=0x7f08003b;
+        public static final int umeng_socialize_back=0x7f080012;
+        public static final int umeng_socialize_comment=0x7f080010;
+        public static final int umeng_socialize_comment_detail=0x7f080011;
+        public static final int umeng_socialize_friends=0x7f080014;
+        public static final int umeng_socialize_login=0x7f08001f;
+        public static final int umeng_socialize_login_qq=0x7f08001e;
+        public static final int umeng_socialize_msg_hor=0x7f08001a;
+        public static final int umeng_socialize_msg_min=0x7f080019;
+        public static final int umeng_socialize_msg_sec=0x7f080018;
+        public static final int umeng_socialize_near_At=0x7f080013;
+        public static final int umeng_socialize_network_break_alert=0x7f08000f;
+        public static final int umeng_socialize_send=0x7f080015;
+        public static final int umeng_socialize_share_content=0x7f08001d;
+        public static final int umeng_socialize_text_add_custom_platform=0x7f08003a;
+        public static final int umeng_socialize_text_authorize=0x7f080021;
+        public static final int umeng_socialize_text_choose_account=0x7f080020;
+        public static final int umeng_socialize_text_comment_hint=0x7f080025;
+        public static final int umeng_socialize_text_douban_key=0x7f080037;
+        public static final int umeng_socialize_text_friend_list=0x7f080026;
+        public static final int umeng_socialize_text_login_fail=0x7f080024;
+        public static final int umeng_socialize_text_qq_key=0x7f080034;
+        public static final int umeng_socialize_text_qq_zone_key=0x7f080035;
+        public static final int umeng_socialize_text_renren_key=0x7f080036;
+        public static final int umeng_socialize_text_sina_key=0x7f080033;
         /**  平台名称 
          */
-        public static final int umeng_socialize_text_tencent_key=0x7f080031;
-        public static final int umeng_socialize_text_tencent_no_connection=0x7f080027;
-        public static final int umeng_socialize_text_tencent_no_install=0x7f08002a;
-        public static final int umeng_socialize_text_tencent_oauth_login_fail=0x7f080028;
-        public static final int umeng_socialize_text_tencent_version_no_match=0x7f080029;
-        public static final int umeng_socialize_text_ucenter=0x7f080022;
-        public static final int umeng_socialize_text_unauthorize=0x7f080021;
-        public static final int umeng_socialize_text_visitor=0x7f080026;
-        public static final int umeng_socialize_text_waitting=0x7f08002b;
-        public static final int umeng_socialize_text_waitting_message=0x7f080030;
-        public static final int umeng_socialize_text_waitting_qq=0x7f08002e;
-        public static final int umeng_socialize_text_waitting_redirect=0x7f08002f;
-        public static final int umeng_socialize_text_waitting_share=0x7f08003b;
-        public static final int umeng_socialize_text_waitting_weixin=0x7f08002c;
-        public static final int umeng_socialize_text_waitting_weixin_circle=0x7f08002d;
-        public static final int umeng_socialize_text_weixin_circle_key=0x7f080038;
-        public static final int umeng_socialize_text_weixin_key=0x7f080037;
-        public static final int umeng_socialize_tip_blacklist=0x7f080015;
-        public static final int umeng_socialize_tip_loginfailed=0x7f080016;
-        public static final int umeng_socialize_ucenter_login_title_guide=0x7f08001a;
-        public static final int umeng_socialize_ucenter_login_title_platform=0x7f08001b;
+        public static final int umeng_socialize_text_tencent_key=0x7f080032;
+        public static final int umeng_socialize_text_tencent_no_connection=0x7f080028;
+        public static final int umeng_socialize_text_tencent_no_install=0x7f08002b;
+        public static final int umeng_socialize_text_tencent_oauth_login_fail=0x7f080029;
+        public static final int umeng_socialize_text_tencent_version_no_match=0x7f08002a;
+        public static final int umeng_socialize_text_ucenter=0x7f080023;
+        public static final int umeng_socialize_text_unauthorize=0x7f080022;
+        public static final int umeng_socialize_text_visitor=0x7f080027;
+        public static final int umeng_socialize_text_waitting=0x7f08002c;
+        public static final int umeng_socialize_text_waitting_message=0x7f080031;
+        public static final int umeng_socialize_text_waitting_qq=0x7f08002f;
+        public static final int umeng_socialize_text_waitting_redirect=0x7f080030;
+        public static final int umeng_socialize_text_waitting_share=0x7f08003c;
+        public static final int umeng_socialize_text_waitting_weixin=0x7f08002d;
+        public static final int umeng_socialize_text_waitting_weixin_circle=0x7f08002e;
+        public static final int umeng_socialize_text_weixin_circle_key=0x7f080039;
+        public static final int umeng_socialize_text_weixin_key=0x7f080038;
+        public static final int umeng_socialize_tip_blacklist=0x7f080016;
+        public static final int umeng_socialize_tip_loginfailed=0x7f080017;
+        public static final int umeng_socialize_ucenter_login_title_guide=0x7f08001b;
+        public static final int umeng_socialize_ucenter_login_title_platform=0x7f08001c;
+        public static final int xpull_to_refresh_have_no_more_to_refresh=0x7f080007;
         public static final int xpull_to_refresh_pull_label=0x7f080002;
         public static final int xpull_to_refresh_refreshing_label=0x7f080004;
         public static final int xpull_to_refresh_release_label=0x7f080003;
@@ -708,4 +777,140 @@ public final class R {
         public static final int courseappwidget=0x7f050000;
         public static final int note_widget=0x7f050001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a StaggeredGridView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #StaggeredGridView_column_count_landscape com.example.android_service:column_count_landscape}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_column_count_portrait com.example.android_service:column_count_portrait}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_grid_paddingBottom com.example.android_service:grid_paddingBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_grid_paddingLeft com.example.android_service:grid_paddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_grid_paddingRight com.example.android_service:grid_paddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_grid_paddingTop com.example.android_service:grid_paddingTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_item_margin com.example.android_service:item_margin}</code></td><td></td></tr>
+           </table>
+           @see #StaggeredGridView_column_count_landscape
+           @see #StaggeredGridView_column_count_portrait
+           @see #StaggeredGridView_grid_paddingBottom
+           @see #StaggeredGridView_grid_paddingLeft
+           @see #StaggeredGridView_grid_paddingRight
+           @see #StaggeredGridView_grid_paddingTop
+           @see #StaggeredGridView_item_margin
+         */
+        public static final int[] StaggeredGridView = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.android_service.R.attr#column_count_landscape}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android_service:column_count_landscape
+        */
+        public static final int StaggeredGridView_column_count_landscape = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.android_service.R.attr#column_count_portrait}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android_service:column_count_portrait
+        */
+        public static final int StaggeredGridView_column_count_portrait = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.android_service.R.attr#grid_paddingBottom}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android_service:grid_paddingBottom
+        */
+        public static final int StaggeredGridView_grid_paddingBottom = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.example.android_service.R.attr#grid_paddingLeft}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android_service:grid_paddingLeft
+        */
+        public static final int StaggeredGridView_grid_paddingLeft = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.example.android_service.R.attr#grid_paddingRight}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android_service:grid_paddingRight
+        */
+        public static final int StaggeredGridView_grid_paddingRight = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.example.android_service.R.attr#grid_paddingTop}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android_service:grid_paddingTop
+        */
+        public static final int StaggeredGridView_grid_paddingTop = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.example.android_service.R.attr#item_margin}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android_service:item_margin
+        */
+        public static final int StaggeredGridView_item_margin = 2;
+    };
 }

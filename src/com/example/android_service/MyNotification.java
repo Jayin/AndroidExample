@@ -1,11 +1,10 @@
 package com.example.android_service;
 
-import com.example.widget.BaseNotification;
-import com.example.widget.BaseNotificationCompat;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.widget.BaseNotification;
 
 public class MyNotification extends Activity {
 	private View send;

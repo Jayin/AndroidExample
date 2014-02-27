@@ -25,11 +25,6 @@
         <activity android:name=".PhotoViewTest" >
         </activity>
         <activity android:name=".PullAndLoadMoreListViewTest" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".TweetAPITest" >
         </activity>
@@ -73,6 +68,13 @@
         <activity android:name=".MyNotification" >
         </activity>
         <activity android:name=".AnimationActy" >
+        </activity>
+        <activity android:name=".StaggeredGridViewTest" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data
