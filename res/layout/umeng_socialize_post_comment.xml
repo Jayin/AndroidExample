@@ -63,18 +63,18 @@
                 android:id="@+id/umeng_socialize_location_ic"
                 android:layout_width="38dp"
                 android:layout_height="23dp"
-             	android:paddingLeft="7.5dp"
-             	android:paddingRight="7.5dp"
                 android:background="@null"
+                android:paddingLeft="7.5dp"
+                android:paddingRight="7.5dp"
                 android:scaleType="fitXY"
-                android:visibility="gone"
-                android:src="@drawable/umeng_socialize_location_off" />
-            <ProgressBar 
+                android:src="@drawable/umeng_socialize_location_off"
+                android:visibility="gone" />
+
+            <ProgressBar
                 android:id="@+id/umeng_socialize_location_progressbar"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
-                android:layout_centerVertical="true"
-               />
+                android:layout_centerVertical="true" />
         </RelativeLayout>
 
         <LinearLayout
@@ -84,7 +84,6 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="5dp"
             android:orientation="horizontal" >
-
         </LinearLayout>
     </RelativeLayout>
 
@@ -101,9 +100,9 @@
             android:background="#ffffff"
             android:bufferType="spannable"
             android:gravity="top"
-            android:textColor="@color/umeng_socialize_text_share_content"
             android:hint="@string/umeng_socialize_text_comment_hint"
-            android:padding="2dp" />
+            android:padding="2dp"
+            android:textColor="@color/umeng_socialize_text_share_content" />
     </RelativeLayout>
 
 </RelativeLayout>

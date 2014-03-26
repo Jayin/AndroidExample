@@ -7,7 +7,8 @@
     <TextView
         android:id="@+id/textView1"
         style="@style/Base_TextView"
-        android:text="TextView" android:layout_width="match_parent"/>
+        android:layout_width="match_parent"
+        android:text="TextView" />
 
     <Button
         android:id="@+id/button1"

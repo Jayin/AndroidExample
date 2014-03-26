@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-<RelativeLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_bg_tweet" >
@@ -26,6 +27,7 @@
             android:textColor="@color/white"
             android:textSize="18sp" />
     </RelativeLayout>
+
     <WebView
         android:id="@+id/webView1"
         android:layout_width="match_parent"
@@ -36,10 +38,9 @@
         android:id="@+id/navigation_foot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/ic_bg_navigation_foot"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        
-        android:background="@drawable/ic_bg_navigation_foot"
         android:padding="4dp" >
 
         <RelativeLayout

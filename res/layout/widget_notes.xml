@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:alpha="0.9"
     android:background="@drawable/ic_bg_acty_notes"
-    android:orientation="vertical" android:alpha="0.9" >
+    android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/frame_main_head"   android:alpha="1">
+        android:alpha="1"
+        android:background="@drawable/frame_main_head" >
 
         <TextView
             android:id="@+id/widget_notes_note_title"

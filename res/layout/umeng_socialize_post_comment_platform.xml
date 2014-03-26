@@ -18,8 +18,8 @@
         android:layout_width="13dp"
         android:layout_height="13dp"
         android:layout_centerVertical="true"
-        android:scaleType="fitXY"
         android:layout_marginLeft="32dp"
+        android:scaleType="fitXY"
         android:src="@drawable/umeng_socialize_checked"
         android:visibility="invisible" />
 

@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-     >
+    android:orientation="vertical" >
 
     <include
         android:id="@+id/umeng_socialize_title"
@@ -12,8 +11,7 @@
     <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/umeng_socialize_list_item_bgcolor"
-         >
+        android:background="@color/umeng_socialize_list_item_bgcolor" >
 
         <ScrollView
             android:id="@+id/umeng_xp_ScrollView"
@@ -21,6 +19,7 @@
             android:layout_height="fill_parent"
             android:layout_gravity="center"
             android:scrollbars="none" >
+
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -54,9 +53,9 @@
                     android:layout_marginTop="18dp"
                     android:paddingLeft="26dp"
                     android:text="分享到"
-                    android:visibility="gone"
                     android:textColor="#84898f"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:id="@+id/umeng_socialize_second_area"

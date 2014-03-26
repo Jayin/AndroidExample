@@ -2,19 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="48dp"
-    android:background="#EEEEEE"
-    >
+    android:background="#EEEEEE" >
 
     <Button
         android:id="@+id/umeng_socialize_title_bar_leftBt"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
         android:background="@drawable/umeng_socialize_action_back"
         android:gravity="center"
         android:textColor="#ffffff"
-        android:layout_marginLeft="8dp"
-        android:layout_centerVertical="true"
         android:textSize="12sp" />
 
     <TextView
@@ -22,10 +21,10 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:gravity="center"
         android:text="@string/umeng_socialize_comment_detail"
         android:textColor="@color/umeng_socialize_text_title"
-        android:layout_centerVertical="true"
         android:textSize="20sp" />
 
     <RelativeLayout
@@ -71,18 +70,20 @@
             android:background="@drawable/umeng_socialize_title_right_bt"
             android:gravity="center"
             android:textColor="#ffffff"
-            android:visibility="gone"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:visibility="gone" />
 
         <ProgressBar
             android:id="@+id/umeng_socialize_title_bar_rightBt_progress"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_centerInParent="true"
-            android:gravity="center" 
-            android:visibility="gone"/>
+            android:gravity="center"
+            android:visibility="gone" />
     </RelativeLayout>
-	<TextView 
-	    style="@style/umeng_socialize_divider"
-	    android:layout_alignParentBottom="true"/>
+
+    <TextView
+        style="@style/umeng_socialize_divider"
+        android:layout_alignParentBottom="true" />
+
 </RelativeLayout>

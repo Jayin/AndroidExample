@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-        android:background="@drawable/umeng_socialize_window_shadow_pad"
+    android:background="@drawable/umeng_socialize_window_shadow_pad"
     android:padding="5dp" >
 
     <include
@@ -32,9 +32,9 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="2dp"
             android:layout_toRightOf="@id/umeng_socialize_follow_check"
-            android:textSize="14sp"
             android:text="关注官方微博"
-            android:textColor="#949BA4" />
+            android:textColor="#949BA4"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <WebView

@@ -13,9 +13,9 @@
 
         <RelativeLayout
             android:id="@+id/umeng_socialize_comment_bt"
-            style="@style/umeng_socialize_action_bar_itemlayout" 
-            android:gravity="center"
-            >
+            style="@style/umeng_socialize_action_bar_itemlayout"
+            android:gravity="center" >
+
             <ImageView
                 android:id="@+id/umeng_socialize_action_comment_im"
                 style="@style/umeng_socialize_action_bar_item_im"
@@ -107,8 +107,8 @@
         style="@style/umeng_socialize_action_bar_itemlayout"
         android:layout_width="fill_parent"
         android:layout_toLeftOf="@id/umeng_socialize_funcation_area"
-        android:visibility="gone"
-        android:paddingLeft="6dp" >
+        android:paddingLeft="6dp"
+        android:visibility="gone" >
 
         <ImageView
             android:id="@+id/umeng_socialize_action_pv_im"

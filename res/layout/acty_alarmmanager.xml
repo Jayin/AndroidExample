@@ -32,7 +32,7 @@
         android:layout_marginLeft="64dp"
         android:layout_marginTop="93dp"
         android:text="TextView"
-         android:textSize="20sp" 
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
 </RelativeLayout>

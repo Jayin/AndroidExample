@@ -5,7 +5,6 @@
     android:background="@drawable/umeng_socialize_window_shadow_pad"
     android:padding="5dp" >
 
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

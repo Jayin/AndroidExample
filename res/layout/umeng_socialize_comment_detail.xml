@@ -17,8 +17,8 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:background="#bebebe"
-        android:layout_height="fill_parent" >
+        android:layout_height="fill_parent"
+        android:background="#bebebe" >
 
         <com.google.android.maps.MapView
             android:id="@+id/umeng_socialize_map"
@@ -31,24 +31,24 @@
         <RelativeLayout
             android:id="@+id/umeng_socialize_map_invisable"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent" 
-            android:paddingTop="50dp"
-            >
-            <TextView 
+            android:layout_height="fill_parent"
+            android:paddingTop="50dp" >
+
+            <TextView
                 android:id="@+id/umeng_socialize_info"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="用户未分享地理位置"
                 android:gravity="center_horizontal"
-                android:textColor="#828282"
-                />
-            <ImageView 
-                android:layout_below="@id/umeng_socialize_info"
-                android:layout_marginTop="10dp"
+                android:text="用户未分享地理位置"
+                android:textColor="#828282" />
+
+            <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:layout_below="@id/umeng_socialize_info"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/umeng_socialize_location_grey"/>
+                android:layout_marginTop="10dp"
+                android:src="@drawable/umeng_socialize_location_grey" />
         </RelativeLayout>
     </RelativeLayout>
 

@@ -4,10 +4,4 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <com.example.widget.ADView
-        android:id="@+id/adview"
-        android:layout_width="match_parent"
-        android:layout_height="100dp" >
-    </com.example.widget.ADView>
-
 </LinearLayout>
