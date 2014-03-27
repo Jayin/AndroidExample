@@ -2,7 +2,7 @@
 
     <item
         android:id="@+id/d1"
-        android:showAsAction="ifRoom|withText"
+        android:showAsAction="ifRoom"
         android:title="1111"/>
     <item
         android:id="@+id/d2"
@@ -12,7 +12,12 @@
         android:title="2222"/>
     <item
         android:id="@+id/d3"
-        android:showAsAction="ifRoom|withText"
+        android:showAsAction="ifRoom"
         android:title="3333"/>
+    
+        <item
+        android:id="@+id/d4"
+        android:showAsAction="ifRoom"
+        android:title="444"/>
 
 </menu>

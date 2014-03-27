@@ -98,6 +98,8 @@
         <activity
             android:name=".ActionBarTest"
             android:theme="@style/AppBaseTheme" >
+        </activity>
+        <activity android:name=".DrawerLayoutActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
