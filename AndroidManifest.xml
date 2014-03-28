@@ -100,6 +100,8 @@
             android:theme="@style/AppBaseTheme" >
         </activity>
         <activity android:name=".DrawerLayoutActivity" >
+        </activity>
+        <activity android:name=".JavascriptTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
