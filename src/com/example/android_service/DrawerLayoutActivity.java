@@ -4,6 +4,9 @@ import android.app.ActionBar;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.DrawerLayout.DrawerListener;
 import android.view.Menu;
@@ -13,13 +16,13 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
-public class DrawerLayoutActivity extends BaseUIActivity {
+import com.fragments.Fragment1;
 
+public class DrawerLayoutActivity extends FragmentActivity {
+    private FragmentManager manager = getSupportFragmentManager();
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawer;
-	private TextView mContent;
 	public static final String[] TITLES = { "Henry IV (1)", "Henry V",
 			"Henry VIII", "Richard II", "Richard III", "Merchant of Venice",
 			"Othello", "King Lear" };
@@ -29,7 +32,7 @@ public class DrawerLayoutActivity extends BaseUIActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.acty_drawerlayou);
+		setContentView(R.layout.acty_drawerlayout);
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setHomeButtonEnabled(true);
@@ -37,13 +40,16 @@ public class DrawerLayoutActivity extends BaseUIActivity {
 
 		initData();
 		initLayout();
-	}
+		Fragment f = new Fragment1();
+		Bundle b = new Bundle();
+		b.putString("content", "Main Page");
+		f.setArguments(b);
+		manager.beginTransaction().replace(R.id.frame_container, f).commit();
+		}
 
-	@Override
 	protected void initLayout() {
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mDrawer = (ListView) findViewById(R.id.left_drawer);
-		mContent = (TextView) findViewById(R.id.content_text);
 
 		// mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
 		// GravityCompat.START);
@@ -78,8 +84,12 @@ public class DrawerLayoutActivity extends BaseUIActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				toast("position:" + TITLES[position]);
-
+				Fragment f = new Fragment1();
+				Bundle b = new Bundle();
+				b.putString("content", "position-->"+position);
+				f.setArguments(b);
+				manager.beginTransaction().replace(R.id.frame_container, f).commit();
+				 mDrawerLayout.closeDrawer(mDrawer);
 			}
 		});
 		
@@ -125,7 +135,6 @@ public class DrawerLayoutActivity extends BaseUIActivity {
 		getMenuInflater().inflate(R.menu.menu_drawlayout, menu);
 		return true;
 	}
-	@Override
 	protected void initData() {
 
 	}
