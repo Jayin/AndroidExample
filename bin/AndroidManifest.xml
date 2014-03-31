@@ -102,6 +102,8 @@
         <activity android:name=".DrawerLayoutActivity" >
         </activity>
         <activity android:name=".JavascriptTest" >
+        </activity>
+        <activity android:name="com.example.android_service.SwipeRefreshLayoutTest1" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

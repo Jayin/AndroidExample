@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.RemoteViews;
 
-import com.example.android_service.ImgLoaderTest;
 import com.example.android_service.MyWebView;
 import com.example.android_service.R;
 
@@ -40,13 +39,13 @@ public class NotesAppWidgetProvider extends AppWidgetProvider {
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager,
 			int[] appWidgetIds) { 	 
 		PendingIntent startNotes = PendingIntent.getActivity(context, 0, new Intent(context,MyWebView.class), 0);
-		PendingIntent editNotes = PendingIntent.getActivity(context, 1 , new Intent(context,ImgLoaderTest.class), 0);
+//		PendingIntent editNotes = PendingIntent.getActivity(context, 1 , new Intent(context,ImgLoaderTest.class), 0);
 		for(int i=0;i<appWidgetIds.length;i++){
 			Log.i("debug", "onUpdata --");
 			
 			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),R.layout.widget_notes);
 			remoteViews.setOnClickPendingIntent(R.id.widget_notes_content, startNotes);
-			remoteViews.setOnClickPendingIntent(R.id.widget_notes_btn_addNote, editNotes);
+//			remoteViews.setOnClickPendingIntent(R.id.widget_notes_btn_addNote, editNotes);
 	 
 			
 			appWidgetManager.updateAppWidget(appWidgetIds[i], remoteViews);
