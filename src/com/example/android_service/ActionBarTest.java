@@ -67,6 +67,5 @@ public class ActionBarTest extends BaseUIActivity {
 		actionbar.setTitle("Main");
 		actionbar.setBackgroundDrawable(getResources().getDrawable(
 				R.drawable.ic_bg_tweet));
-	    
 	}
 }
