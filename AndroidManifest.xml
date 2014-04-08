@@ -97,7 +97,12 @@
         </activity>
         <activity
             android:name=".ActionBarTest"
-            android:theme="@style/AppBaseTheme" >
+            android:theme="@style/ActionBarstyle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".DrawerLayoutActivity" >
         </activity>
@@ -106,11 +111,6 @@
         <activity android:name="com.example.android_service.SwipeRefreshLayoutTest1" >
         </activity>
         <activity android:name=".GraphViewTest" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

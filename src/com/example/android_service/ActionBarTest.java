@@ -1,9 +1,9 @@
 package com.example.android_service;
 
-
 import java.lang.reflect.Field;
 
 import android.app.ActionBar;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.view.Menu;
@@ -18,16 +18,6 @@ public class ActionBarTest extends BaseUIActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.acty_actionbartest);
-		try {  
-		    ViewConfiguration config = ViewConfiguration.get(this);                                
-		    Field menuKeyField = ViewConfiguration.class.getDeclaredField("HasPermanentMenuKey");  
-		    if(menuKeyField != null) {  
-		        menuKeyField.setAccessible(true);  
-		        menuKeyField.setBoolean(config, false);  
-		    }  
-		} catch (Exception ex) {  
-		    // Ignore  
-		}  
 		initData();
 		initLayout();
 	}
@@ -57,15 +47,23 @@ public class ActionBarTest extends BaseUIActivity {
 		} else {
 			openActivity(ActionBarTest.class);
 		}
-
+		if (item.getItemId() == android.R.id.icon) {
+			toast("lol");
+		}
+		System.out.println(item.getItemId());
 		return true;
 	}
 
 	@Override
 	protected void initData() {
 		ActionBar actionbar = getActionBar();
-		actionbar.setTitle("Main");
-		actionbar.setBackgroundDrawable(getResources().getDrawable(
-				R.drawable.ic_bg_tweet));
+		 actionbar.setTitle("Main");
+		// actionbar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME
+		// |ActionBar.DISPLAY_HOME_AS_UP);
+		actionbar.setDisplayHomeAsUpEnabled(true);
+		// actionbar.setHomeButtonEnabled(true);
+		// actionbar.setDisplayShowTitleEnabled(true);
+		// actionbar.setLogo(R.drawable.abs__ic_ab_back_holo_dark);
+
 	}
 }
