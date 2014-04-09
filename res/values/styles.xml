@@ -5,15 +5,26 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme"></style>
 
-    <style name="ActionBarstyle" parent="@android:style/Theme.Holo.Light">
+    <style name="actionbarActivity" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/myactionbarStyle</item>
+         <item name="android:homeAsUpIndicator">@drawable/ic_btn_web_back_unclick</item>
+    </style>
+
+    <style name="myactionbarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/ic_bg_tweet</item>
+       
+    </style>
+
+    <style name="ActionBarstyle" parent="AppBaseTheme">
         <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="android:windowActionBarOverlay">true</item>
     </style>
 
-    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
-                <item name="android:background">@android:color/holo_blue_light</item>
+    <style name="MyActionBar" parent="@android:style/Widget.ActionBar">
+                        <item name="android:background">@android:color/holo_blue_light</item>
+        <item name="android:titleTextStyle">@style/MyTitleTextStyle</item>
     </style>
-    <!-- <item name="android:titleTextStyle">@style/MyTitleTextStyle</item> -->
+
     <style name="MyTitleTextStyle">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">11sp</item>

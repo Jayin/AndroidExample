@@ -1843,13 +1843,13 @@ containing a value of this type.
         public static final int xpull_to_refresh_tap_loadmore_label=0x7f0c0013;
     }
     public static final class style {
-        public static final int ActionBarstyle=0x7f0d0081;
-        public static final int Acty_Course_Setting=0x7f0d008d;
-        public static final int Acty_Course_Setting_textview=0x7f0d008e;
-        public static final int Animations=0x7f0d0088;
-        public static final int Animations_activity=0x7f0d008b;
-        public static final int Animations_dialog=0x7f0d008a;
-        public static final int Animations_popup_right=0x7f0d0089;
+        public static final int ActionBarstyle=0x7f0d0083;
+        public static final int Acty_Course_Setting=0x7f0d008f;
+        public static final int Acty_Course_Setting_textview=0x7f0d0090;
+        public static final int Animations=0x7f0d008a;
+        public static final int Animations_activity=0x7f0d008d;
+        public static final int Animations_dialog=0x7f0d008c;
+        public static final int Animations_popup_right=0x7f0d008b;
         /** 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
@@ -1866,25 +1866,23 @@ containing a value of this type.
         /**  Application theme. 
          */
         public static final int AppTheme=0x7f0d0080;
-        public static final int BaseDialog=0x7f0d0086;
-        public static final int Base_Button=0x7f0d0092;
-        public static final int Base_Layout=0x7f0d0093;
-        public static final int Base_TextView=0x7f0d008f;
-        public static final int Base_TextView_common=0x7f0d0090;
-        public static final int Better_TextView_ETipsMain=0x7f0d0091;
+        public static final int BaseDialog=0x7f0d0088;
+        public static final int Base_Button=0x7f0d0094;
+        public static final int Base_Layout=0x7f0d0095;
+        public static final int Base_TextView=0x7f0d0091;
+        public static final int Base_TextView_common=0x7f0d0092;
+        public static final int Better_TextView_ETipsMain=0x7f0d0093;
         /**  the theme applied to the application or activity 
          */
-        public static final int CustomActionBarTheme=0x7f0d0094;
-        public static final int ListView_Base=0x7f0d008c;
+        public static final int CustomActionBarTheme=0x7f0d0096;
+        public static final int ListView_Base=0x7f0d008e;
         /**  general styles for the action bar 
          */
-        public static final int MyActionBar=0x7f0d0082;
-        /**   <item name="android:titleTextStyle">@style/MyTitleTextStyle</item> 
-         */
-        public static final int MyTitleTextStyle=0x7f0d0083;
+        public static final int MyActionBar=0x7f0d0084;
+        public static final int MyTitleTextStyle=0x7f0d0085;
         /**  action bar tab text 
          */
-        public static final int TabTextStyle=0x7f0d0096;
+        public static final int TabTextStyle=0x7f0d0098;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0d0061;
@@ -1978,11 +1976,11 @@ containing a value of this type.
         /**  Base platform-dependent theme providing a light-themed activity. 
          */
         public static final int Theme_Base_Light=0x7f0d0079;
-        public static final int Theme_UMDefault=0x7f0d00a0;
-        public static final int Theme_UMDialog=0x7f0d009f;
+        public static final int Theme_UMDefault=0x7f0d00a2;
+        public static final int Theme_UMDialog=0x7f0d00a1;
         /**  action bar title text 
          */
-        public static final int TitleTextStyle=0x7f0d0095;
+        public static final int TitleTextStyle=0x7f0d0097;
         /**  Styles in here can be extended for customisation in your application. Each utilises
          one of the Base styles. If Holo themes are available on the current platform version
          they will be used instead of the compat styles. 
@@ -2073,22 +2071,24 @@ containing a value of this type.
         public static final int Widget_AppCompat_ProgressBar=0x7f0d000a;
         public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0d0009;
         public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0d0022;
+        public static final int actionbarActivity=0x7f0d0081;
         /**  <item  name="android:background">@color/lucency_white</item> 
          */
-        public static final int acty_course_detail_textview=0x7f0d0087;
-        public static final int item_listview_lesson_textview=0x7f0d0085;
-        public static final int loading_small=0x7f0d0084;
-        public static final int umeng_socialize_action_bar_item_im=0x7f0d0098;
-        public static final int umeng_socialize_action_bar_item_tv=0x7f0d0099;
-        public static final int umeng_socialize_action_bar_itemlayout=0x7f0d0097;
-        public static final int umeng_socialize_dialog_anim_fade=0x7f0d009d;
-        public static final int umeng_socialize_dialog_animations=0x7f0d009c;
-        public static final int umeng_socialize_divider=0x7f0d00a1;
-        public static final int umeng_socialize_edit_padding=0x7f0d00a3;
-        public static final int umeng_socialize_list_item=0x7f0d00a2;
-        public static final int umeng_socialize_popup_dialog=0x7f0d009b;
-        public static final int umeng_socialize_popup_dialog_anim=0x7f0d009a;
-        public static final int umeng_socialize_shareboard_animation=0x7f0d009e;
+        public static final int acty_course_detail_textview=0x7f0d0089;
+        public static final int item_listview_lesson_textview=0x7f0d0087;
+        public static final int loading_small=0x7f0d0086;
+        public static final int myactionbarStyle=0x7f0d0082;
+        public static final int umeng_socialize_action_bar_item_im=0x7f0d009a;
+        public static final int umeng_socialize_action_bar_item_tv=0x7f0d009b;
+        public static final int umeng_socialize_action_bar_itemlayout=0x7f0d0099;
+        public static final int umeng_socialize_dialog_anim_fade=0x7f0d009f;
+        public static final int umeng_socialize_dialog_animations=0x7f0d009e;
+        public static final int umeng_socialize_divider=0x7f0d00a3;
+        public static final int umeng_socialize_edit_padding=0x7f0d00a5;
+        public static final int umeng_socialize_list_item=0x7f0d00a4;
+        public static final int umeng_socialize_popup_dialog=0x7f0d009d;
+        public static final int umeng_socialize_popup_dialog_anim=0x7f0d009c;
+        public static final int umeng_socialize_shareboard_animation=0x7f0d00a0;
     }
     public static final class xml {
         public static final int courseappwidget=0x7f050000;
