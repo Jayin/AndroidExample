@@ -98,14 +98,15 @@
         <activity
             android:name=".ActionBarTest"
             android:theme="@style/ActionBarstyle" >
-               <intent-filter>
+        </activity>
+        <activity
+            android:name=".ActionbarTest2"
+            android:theme="@style/actionbarActivity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ActionbarTest2" android:theme="@style/actionbarActivity">
-         
         </activity>
         <activity android:name=".DrawerLayoutActivity" >
         </activity>
